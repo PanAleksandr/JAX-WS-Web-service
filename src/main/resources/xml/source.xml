@@ -1,0 +1,289 @@
+<sportsmen>
+    <sportsman>
+        <name>Ivan</name>
+        <age>25</age>
+        <profession>Programmer</profession>
+        <height>1.80</height>
+        <weight>75.0</weight>
+        <isProfessional>true</isProfessional>
+        <gender>M</gender>
+        <exercises>
+            <exercise>
+                <name>Bench Press</name>
+                <sets>4</sets>
+                <reps>10</reps>
+                <weight>80.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>A</difficulty>
+            </exercise>
+            <exercise>
+                <name>Deadlift</name>
+                <sets>3</sets>
+                <reps>8</reps>
+                <weight>100.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>A</difficulty>
+            </exercise>
+            <exercise>
+                <name>Treadmill</name>
+                <sets>3</sets>
+                <reps>15</reps>
+                <weight>0.0</weight>
+                <isTimed>true</isTimed>
+                <difficulty>B</difficulty>
+            </exercise>
+        </exercises>
+    </sportsman>
+
+    <sportsman>
+        <name>Alexandra</name>
+        <age>30</age>
+        <profession>Footballer</profession>
+        <height>1.70</height>
+        <weight>65.0</weight>
+        <isProfessional>false</isProfessional>
+        <gender>F</gender>
+        <exercises>
+            <exercise>
+                <name>Squats</name>
+                <sets>4</sets>
+                <reps>12</reps>
+                <weight>60.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>A</difficulty>
+            </exercise>
+            <exercise>
+                <name>Lunges</name>
+                <sets>3</sets>
+                <reps>15</reps>
+                <weight>20.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>B</difficulty>
+            </exercise>
+            <exercise>
+                <name>Leg Press</name>
+                <sets>3</sets>
+                <reps>10</reps>
+                <weight>100.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>A</difficulty>
+            </exercise>
+        </exercises>
+    </sportsman>
+
+    <sportsman>
+        <name>Dmitry</name>
+        <age>22</age>
+        <profession>Student</profession>
+        <height>1.75</height>
+        <weight>68.0</weight>
+        <isProfessional>false</isProfessional>
+        <gender>M</gender>
+        <exercises>
+            <exercise>
+                <name>Push-ups</name>
+                <sets>3</sets>
+                <reps>20</reps>
+                <weight>0.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>B</difficulty>
+            </exercise>
+            <exercise>
+                <name>Jump Rope</name>
+                <sets>5</sets>
+                <reps>60</reps>
+                <weight>0.0</weight>
+                <isTimed>true</isTimed>
+                <difficulty>C</difficulty>
+            </exercise>
+            <exercise>
+                <name>Lat Pulldown</name>
+                <sets>3</sets>
+                <reps>12</reps>
+                <weight>50.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>B</difficulty>
+            </exercise>
+        </exercises>
+    </sportsman>
+
+    <sportsman>
+        <name>Maria</name>
+        <age>28</age>
+        <profession>Manager</profession>
+        <height>1.65</height>
+        <weight>60.0</weight>
+        <isProfessional>true</isProfessional>
+        <gender>F</gender>
+        <exercises>
+            <exercise>
+                <name>Treadmill Run</name>
+                <sets>5</sets>
+                <reps>10</reps>
+                <weight>0.0</weight>
+                <isTimed>true</isTimed>
+                <difficulty>B</difficulty>
+            </exercise>
+            <exercise>
+                <name>Rowing Machine</name>
+                <sets>3</sets>
+                <reps>10</reps>
+                <weight>0.0</weight>
+                <isTimed>true</isTimed>
+                <difficulty>C</difficulty>
+            </exercise>
+            <exercise>
+                <name>Kettlebell Swings</name>
+                <sets>3</sets>
+                <reps>15</reps>
+                <weight>16.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>B</difficulty>
+            </exercise>
+        </exercises>
+    </sportsman>
+
+    <sportsman>
+        <name>Sergey</name>
+        <age>35</age>
+        <profession>Analyst</profession>
+        <height>1.82</height>
+        <weight>80.0</weight>
+        <isProfessional>false</isProfessional>
+        <gender>M</gender>
+        <exercises>
+            <exercise>
+                <name>Bench Press</name>
+                <sets>4</sets>
+                <reps>8</reps>
+                <weight>90.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>A</difficulty>
+            </exercise>
+            <exercise>
+                <name>Lat Pulldown</name>
+                <sets>3</sets>
+                <reps>12</reps>
+                <weight>70.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>B</difficulty>
+            </exercise>
+            <exercise>
+                <name>Leg Press</name>
+                <sets>3</sets>
+                <reps>15</reps>
+                <weight>100.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>B</difficulty>
+            </exercise>
+        </exercises>
+    </sportsman>
+
+    <sportsman>
+        <name>Olga</name>
+        <age>26</age>
+        <profession>Lawyer</profession>
+        <height>1.68</height>
+        <weight>58.0</weight>
+        <isProfessional>true</isProfessional>
+        <gender>F</gender>
+        <exercises>
+            <exercise>
+                <name>Elliptical Trainer</name>
+                <sets>5</sets>
+                <reps>15</reps>
+                <weight>0.0</weight>
+                <isTimed>true</isTimed>
+                <difficulty>C</difficulty>
+            </exercise>
+            <exercise>
+                <name>Goblet Squats</name>
+                <sets>3</sets>
+                <reps>12</reps>
+                <weight>12.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>B</difficulty>
+            </exercise>
+            <exercise>
+                <name>Rowing Machine</name>
+                <sets>3</sets>
+                <reps>15</reps>
+                <weight>0.0</weight>
+                <isTimed>true</isTimed>
+                <difficulty>C</difficulty>
+            </exercise>
+        </exercises>
+    </sportsman>
+
+    <sportsman>
+        <name>Nikolay</name>
+        <age>40</age>
+        <profession>Engineer</profession>
+        <height>1.78</height>
+        <weight>85.0</weight>
+        <isProfessional>true</isProfessional>
+        <gender>M</gender>
+        <exercises>
+            <exercise>
+                <name>Chest Fly</name>
+                <sets>4</sets>
+                <reps>12</reps>
+                <weight>15.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>A</difficulty>
+            </exercise>
+            <exercise>
+                <name>Seated Row</name>
+                <sets>3</sets>
+                <reps>10</reps>
+                <weight>80.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>B</difficulty>
+            </exercise>
+            <exercise>
+                <name>Leg Press</name>
+                <sets>4</sets>
+                <reps>15</reps>
+                <weight>90.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>A</difficulty>
+            </exercise>
+        </exercises>
+    </sportsman>
+
+    <sportsman>
+        <name>Elena</name>
+        <age>23</age>
+        <profession>Teacher</profession>
+        <height>1.60</height>
+        <weight>55.0</weight>
+        <isProfessional>false</isProfessional>
+        <gender>F</gender>
+        <exercises>
+            <exercise>
+                <name>Jump Rope</name>
+                <sets>5</sets>
+                <reps>60</reps>
+                <weight>0.0</weight>
+                <isTimed>true</isTimed>
+                <difficulty>C</difficulty>
+            </exercise>
+            <exercise>
+                <name>Bodyweight Squats</name>
+                <sets>4</sets>
+                <reps>15</reps>
+                <weight>0.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>B</difficulty>
+            </exercise>
+            <exercise>
+                <name>Shoulder Press</name>
+                <sets>3</sets>
+                <reps>10</reps>
+                <weight>10.0</weight>
+                <isTimed>false</isTimed>
+                <difficulty>B</difficulty>
+            </exercise>
+        </exercises>
+    </sportsman>
+</sportsmen>

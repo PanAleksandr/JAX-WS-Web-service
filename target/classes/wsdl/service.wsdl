@@ -1,0 +1,92 @@
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:tns="http://example.com/sportsman"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             targetNamespace="http://example.com/sportsman"
+             name="SportsmanService">
+
+    <types>
+        <xsd:schema targetNamespace="http://example.com/sportsman">
+            <xsd:complexType name="Sportsman">
+                <xsd:sequence>
+                    <xsd:element name="id" type="xsd:int"/>
+                    <xsd:element name="name" type="xsd:string"/>
+                    <xsd:element name="age" type="xsd:int"/>
+                    <xsd:element name="sport" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+
+            <xsd:element name="getSportsmanByIdRequest">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="id" type="xsd:int"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <xsd:element name="getSportsmanByIdResponse" type="tns:Sportsman"/>
+
+            <xsd:element name="getAllSportsmenRequest" type="xsd:anyType"/>
+
+            <xsd:element name="getAllSportsmenResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="sportsmen" type="tns:Sportsman" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </types>
+
+    <message name="getSportsmanByIdRequest">
+        <part name="parameters" element="tns:getSportsmanByIdRequest"/>
+    </message>
+    <message name="getSportsmanByIdResponse">
+        <part name="parameters" element="tns:getSportsmanByIdResponse"/>
+    </message>
+    <message name="getAllSportsmenRequest">
+        <part name="parameters" element="tns:getAllSportsmenRequest"/>
+    </message>
+    <message name="getAllSportsmenResponse">
+        <part name="parameters" element="tns:getAllSportsmenResponse"/>
+    </message>
+
+    <portType name="SportsmanServicePortType">
+        <operation name="getSportsmanById">
+            <input message="tns:getSportsmanByIdRequest"/>
+            <output message="tns:getSportsmanByIdResponse"/>
+        </operation>
+        <operation name="getAllSportsmen">
+            <input message="tns:getAllSportsmenRequest"/>
+            <output message="tns:getAllSportsmenResponse"/>
+        </operation>
+    </portType>
+
+    <binding name="SportsmanServiceBinding" type="tns:SportsmanServicePortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="getSportsmanById">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+        <operation name="getAllSportsmen">
+            <soap:operation soapAction=""/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+
+    <service name="SportsmanService">
+        <port name="SportsmanServicePort" binding="tns:SportsmanServiceBinding">
+            <soap:address location="http://localhost:8082/ws/sportsman"/>
+        </port>
+    </service>
+</definitions>

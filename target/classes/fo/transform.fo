@@ -1,0 +1,77 @@
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output method="xml" indent="yes"/>
+
+    <xsl:template match="/">
+        <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+            <fo:layout-master-set>
+                <fo:simple-page-master master-name="A4" page-width="21cm" page-height="29.7cm" margin="1cm">
+                    <fo:region-body/>
+                </fo:simple-page-master>
+            </fo:layout-master-set>
+
+            <fo:page-sequence master-reference="A4">
+                <fo:flow flow-name="xsl-region-body">
+                    <fo:block font-size="16pt" font-weight="bold" text-align="center" space-after.optimum="15pt">
+                        Sportsmen List
+                    </fo:block>
+
+                    <xsl:for-each select="sportsmen/sportsman">
+                        <fo:table table-layout="fixed" width="100%" border="1pt solid black" space-after="10pt">
+                            <fo:table-header>
+                                <fo:table-row background-color="#B0C4DE">
+                                    <fo:table-cell><fo:block>Name</fo:block></fo:table-cell>
+                                    <fo:table-cell><fo:block>Age</fo:block></fo:table-cell>
+                                    <fo:table-cell><fo:block>Profession</fo:block></fo:table-cell>
+                                    <fo:table-cell><fo:block>Height</fo:block></fo:table-cell>
+                                    <fo:table-cell><fo:block>Weight</fo:block></fo:table-cell>
+                                    <fo:table-cell><fo:block>Professional</fo:block></fo:table-cell>
+                                    <fo:table-cell><fo:block>Gender</fo:block></fo:table-cell>
+                                </fo:table-row>
+                            </fo:table-header>
+                            <fo:table-body>
+                                <fo:table-row>
+                                    <fo:table-cell><fo:block><xsl:value-of select="name"/></fo:block></fo:table-cell>
+                                    <fo:table-cell><fo:block><xsl:value-of select="age"/></fo:block></fo:table-cell>
+                                    <fo:table-cell><fo:block><xsl:value-of select="profession"/></fo:block></fo:table-cell>
+                                    <fo:table-cell><fo:block><xsl:value-of select="height"/></fo:block></fo:table-cell>
+                                    <fo:table-cell><fo:block><xsl:value-of select="weight"/></fo:block></fo:table-cell>
+                                    <fo:table-cell><fo:block><xsl:value-of select="isProfessional"/></fo:block></fo:table-cell>
+                                    <fo:table-cell><fo:block><xsl:value-of select="gender"/></fo:block></fo:table-cell>
+                                </fo:table-row>
+                                <fo:table-row>
+                                    <fo:table-cell number-columns-spanned="7">
+                                        <fo:block font-weight="bold" space-before="10pt">Exercises</fo:block>
+                                        <fo:table width="100%" table-layout="fixed" border="1pt solid black">
+                                            <fo:table-header>
+                                                <fo:table-row background-color="#D3D3D3">
+                                                    <fo:table-cell><fo:block>Exercise Name</fo:block></fo:table-cell>
+                                                    <fo:table-cell><fo:block>Reps</fo:block></fo:table-cell>
+                                                    <fo:table-cell><fo:block>Sets</fo:block></fo:table-cell>
+                                                    <fo:table-cell><fo:block>Weight</fo:block></fo:table-cell>
+                                                    <fo:table-cell><fo:block>Is Timed</fo:block></fo:table-cell>
+                                                    <fo:table-cell><fo:block>Difficulty</fo:block></fo:table-cell>
+                                                </fo:table-row>
+                                            </fo:table-header>
+                                            <fo:table-body>
+                                                <xsl:for-each select="exercises/exercise">
+                                                    <fo:table-row>
+                                                        <fo:table-cell><fo:block><xsl:value-of select="name"/></fo:block></fo:table-cell>
+                                                        <fo:table-cell><fo:block><xsl:value-of select="reps"/></fo:block></fo:table-cell>
+                                                        <fo:table-cell><fo:block><xsl:value-of select="sets"/></fo:block></fo:table-cell>
+                                                        <fo:table-cell><fo:block><xsl:value-of select="weight"/></fo:block></fo:table-cell>
+                                                        <fo:table-cell><fo:block><xsl:value-of select="isTimed"/></fo:block></fo:table-cell>
+                                                        <fo:table-cell><fo:block><xsl:value-of select="difficulty"/></fo:block></fo:table-cell>
+                                                    </fo:table-row>
+                                                </xsl:for-each>
+                                            </fo:table-body>
+                                        </fo:table>
+                                    </fo:table-cell>
+                                </fo:table-row>
+                            </fo:table-body>
+                        </fo:table>
+                    </xsl:for-each>
+                </fo:flow>
+            </fo:page-sequence>
+        </fo:root>
+    </xsl:template>
+</xsl:stylesheet>
